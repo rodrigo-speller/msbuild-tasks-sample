@@ -7,6 +7,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{FDC60DB1-F55
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSBuildSample.ConsoleApp", "src\MSBuildSample.ConsoleApp\MSBuildSample.ConsoleApp.csproj", "{28F9009F-19AD-4C9E-A6E5-0A9F1817FB6B}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{2DD5D245-9394-4A06-BE00-722CE710BA60}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSBuildSample.Build.Tasks", "build\MSBuildSample.Build.Tasks\MSBuildSample.Build.Tasks.csproj", "{66530907-8544-4182-815A-9BA7A8A2E411}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,8 +36,21 @@ Global
 		{28F9009F-19AD-4C9E-A6E5-0A9F1817FB6B}.Release|x64.Build.0 = Release|Any CPU
 		{28F9009F-19AD-4C9E-A6E5-0A9F1817FB6B}.Release|x86.ActiveCfg = Release|Any CPU
 		{28F9009F-19AD-4C9E-A6E5-0A9F1817FB6B}.Release|x86.Build.0 = Release|Any CPU
+		{66530907-8544-4182-815A-9BA7A8A2E411}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66530907-8544-4182-815A-9BA7A8A2E411}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66530907-8544-4182-815A-9BA7A8A2E411}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{66530907-8544-4182-815A-9BA7A8A2E411}.Debug|x64.Build.0 = Debug|Any CPU
+		{66530907-8544-4182-815A-9BA7A8A2E411}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{66530907-8544-4182-815A-9BA7A8A2E411}.Debug|x86.Build.0 = Debug|Any CPU
+		{66530907-8544-4182-815A-9BA7A8A2E411}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66530907-8544-4182-815A-9BA7A8A2E411}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66530907-8544-4182-815A-9BA7A8A2E411}.Release|x64.ActiveCfg = Release|Any CPU
+		{66530907-8544-4182-815A-9BA7A8A2E411}.Release|x64.Build.0 = Release|Any CPU
+		{66530907-8544-4182-815A-9BA7A8A2E411}.Release|x86.ActiveCfg = Release|Any CPU
+		{66530907-8544-4182-815A-9BA7A8A2E411}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{28F9009F-19AD-4C9E-A6E5-0A9F1817FB6B} = {FDC60DB1-F557-436D-89E0-D6191C189720}
+		{66530907-8544-4182-815A-9BA7A8A2E411} = {2DD5D245-9394-4A06-BE00-722CE710BA60}
 	EndGlobalSection
 EndGlobal

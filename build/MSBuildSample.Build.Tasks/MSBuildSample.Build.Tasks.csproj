@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Build.Framework" Version="15.9.20" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="*.props" CopyToOutputDirectory="Always" />
+    <Content Include="*.targets" CopyToOutputDirectory="Always" />
+  </ItemGroup>
+
+</Project>
