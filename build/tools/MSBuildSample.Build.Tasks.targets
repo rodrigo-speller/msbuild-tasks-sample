@@ -5,4 +5,5 @@
   -->
 
   <UsingTask TaskName="SampleMessage" AssemblyFile="MSBuildSample.Build.Tasks.dll" />
+  <UsingTask TaskName="GitVersion" AssemblyFile="MSBuildSample.Build.Tasks.dll" />
 </Project>

@@ -6,6 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="LibGit2Sharp" Version="0.25.4" />
     <PackageReference Include="Microsoft.Build.Framework" Version="15.9.20" />
   </ItemGroup>
 
@@ -13,5 +14,7 @@
     <Content Include="*.props" CopyToOutputDirectory="Always" />
     <Content Include="*.targets" CopyToOutputDirectory="Always" />
   </ItemGroup>
+
+  <Import Project="$(NuGetPackageRoot)libgit2sharp.nativebinaries\1.0.252\build\net461\LibGit2Sharp.NativeBinaries.props" />
 
 </Project>
