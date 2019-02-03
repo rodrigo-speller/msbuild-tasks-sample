@@ -1,0 +1,7 @@
+<Project>
+  <!-- Import above "Directory.Build.props" file -->
+  <Import Project="$([MSBuild]::GetPathOfFileAbove('Directory.Build.props', '$(MSBuildThisFileDirectory)../'))" />
+
+  <!-- Import tasks targets -->
+  <Import Project="$(BuildToolsDirectory)/MSBuildSample.Build.Tasks.props" />
+</Project>
