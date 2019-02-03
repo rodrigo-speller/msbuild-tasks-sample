@@ -3,4 +3,6 @@
     This file must be edited to extends build process with
     MSBuildSample.Build.Tasks targets and tasks elements.
   -->
+
+  <UsingTask TaskName="GitVersion" AssemblyFile="MSBuildSample.Build.Tasks.dll" />
 </Project>
