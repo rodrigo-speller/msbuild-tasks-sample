@@ -1,0 +1,16 @@
+<Project>
+  <!--
+    This is the solution level "Directory.Build.props" file.
+  -->
+
+  <!--
+    Add the following element to import above "Directory.Build.props"
+    file:
+
+    <Import Project="$([MSBuild]::GetPathOfFileAbove('Directory.Build.props', '$(MSBuildThisFileDirectory)../'))" />
+  -->
+
+  <PropertyGroup>
+    <BuildToolsDirectory>$([MSBuild]::NormalizePath('$(MSBuildThisFileDirectory)build/tools/'))</BuildToolsDirectory>
+  </PropertyGroup>
+</Project>

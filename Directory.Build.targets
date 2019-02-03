@@ -1,0 +1,12 @@
+<Project>
+  <!--
+    This is the solution level "Directory.Build.targets" file.
+  -->
+
+  <!--
+    Add the following element to import above "Directory.Build.targets"
+    file:
+
+    <Import Project="$([MSBuild]::GetPathOfFileAbove('Directory.Build.targets', '$(MSBuildThisFileDirectory)../'))" />
+  -->
+</Project>

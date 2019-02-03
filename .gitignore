@@ -339,3 +339,8 @@ ASALocalRun/
 
 # BeatPulse healthcheck temp database 
 healthchecksdb
+
+## Solution definitions
+
+# Solution build tools
+!build/tools/**/*
