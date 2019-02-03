@@ -4,4 +4,32 @@
 
   <!-- Import tasks targets -->
   <Import Project="$(BuildToolsDirectory)/MSBuildSample.Build.Tasks.targets" />
+
+  <!-- Execute the "GitVersion" target before get assembly version -->
+  <Target Name="GitVersion" BeforeTargets="GetAssemblyVersion">
+    <!-- GitVersion task execution -->
+    <GitVersion Configuration="$(Configuration)" ContinueOnError="true">
+      <Output TaskParameter="Version" PropertyName="GitVersionNumber" />
+      <Output TaskParameter="Identifier" PropertyName="GitVersionIdentifier" />
+      <Output TaskParameter="IsDirty" PropertyName="GitVersionIsDirty" />
+    </GitVersion>
+
+    <!-- Result, because ContinueOnError="true" -->
+    <PropertyGroup>
+      <GitVersionSuccess Condition="$(GitVersionNumber) == ''">false</GitVersionSuccess>
+      <GitVersionSuccess Condition="$(GitVersionNumber) != ''">true</GitVersionSuccess>
+    </PropertyGroup>
+
+    <!-- Log -->
+    <Error Text="You cannot release this project without a version number." Condition="$(Configuration) == 'Release' and $(GitVersionSuccess) != 'true'" />
+    <Message Text="Current version: $(GitVersionNumber) $(GitVersionIdentifier)" Importance="High" Condition="$(GitVersionSuccess) == 'true'" />
+    <Error Text="Git repository is dirty! Commit your changes before release." Condition="$(Configuration) == 'Release' and $(GitVersionIsDirty) == 'true'" />
+
+    <!-- Set AssemblyVersion and InformationalVersion -->
+    <PropertyGroup Condition="$(GitVersionSuccess) == 'true'">
+      <AssemblyVersion Condition="$(AssemblyVersion) == ''">$(GitVersionNumber)</AssemblyVersion>
+      <InformationalVersion Condition="$(InformationalVersion) == '' and $(GitVersionIsDirty) == 'true'">$(GitVersionNumber) $(GitVersionIdentifier)*</InformationalVersion>
+      <InformationalVersion Condition="$(InformationalVersion) == '' and $(GitVersionIsDirty) != 'true'">$(GitVersionNumber) $(GitVersionIdentifier)</InformationalVersion>
+    </PropertyGroup>
+  </Target>
 </Project>
