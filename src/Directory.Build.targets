@@ -4,4 +4,14 @@
 
   <!-- Import tasks targets -->
   <Import Project="$(BuildToolsDirectory)/MSBuildSample.Build.Tasks.targets" />
+
+  <PropertyGroup>
+    <!-- Execute the "SampleTarget" target before build -->
+    <BuildDependsOn>SampleTarget;$(BuildDependsOn)</BuildDependsOn>
+  </PropertyGroup>
+
+  <Target Name="SampleTarget">
+    <!-- SampleMessage task execution -->
+    <SampleMessage Text="It works!" Importance="High" />
+  </Target>
 </Project>
